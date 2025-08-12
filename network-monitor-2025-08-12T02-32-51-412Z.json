@@ -1,0 +1,191 @@
+{
+  "metadata": {
+    "exportTime": "2025-08-12T02:32:51.413Z",
+    "totalRequests": 4,
+    "monitoringDuration": 1849
+  },
+  "analysis": {
+    "summary": {
+      "totalRequests": 4,
+      "successfulRequests": 1,
+      "failedRequests": 3,
+      "successRate": "25.00"
+    },
+    "performance": {
+      "avgResponseTime": "18.95",
+      "minResponseTime": "18.95",
+      "maxResponseTime": "18.95",
+      "medianResponseTime": "18.95"
+    },
+    "traffic": {
+      "totalDataTransferred": 236,
+      "avgRequestSize": "236.00"
+    },
+    "endpoints": {
+      "http://localhost:3000/api/server-info": {
+        "requests": 1,
+        "successful": 1,
+        "failed": 0,
+        "avgResponseTime": "18.95",
+        "totalData": 236
+      },
+      "https://api.github.com/users/intekaih": {
+        "requests": 1,
+        "successful": 0,
+        "failed": 1,
+        "avgResponseTime": 0,
+        "totalData": 0
+      },
+      "https://jsonplaceholder.typicode.com/posts/1": {
+        "requests": 1,
+        "successful": 0,
+        "failed": 1,
+        "avgResponseTime": 0,
+        "totalData": 0
+      },
+      "http://localhost:9999/nonexistent": {
+        "requests": 1,
+        "successful": 0,
+        "failed": 1,
+        "avgResponseTime": 0,
+        "totalData": 0
+      }
+    }
+  },
+  "rawData": [
+    {
+      "timestamp": "2025-08-12T02:32:49.061Z",
+      "url": "http://localhost:3000/api/server-info",
+      "method": "GET",
+      "statusCode": 200,
+      "responseTime": 18.952658,
+      "contentLength": 236,
+      "memoryUsage": {
+        "before": {
+          "rss": 45113344,
+          "heapTotal": 5218304,
+          "heapUsed": 4906624,
+          "external": 1922999,
+          "arrayBuffers": 16659
+        },
+        "after": {
+          "rss": 47624192,
+          "heapTotal": 6684672,
+          "heapUsed": 5043200,
+          "external": 1935957,
+          "arrayBuffers": 17442
+        },
+        "difference": {
+          "rss": 2510848,
+          "heapUsed": 136576,
+          "external": 12958
+        }
+      },
+      "headers": {
+        "x-powered-by": "Express",
+        "x-server-info": "Lab01-Client-Server",
+        "x-timestamp": "2025-08-12T02:32:49.056Z",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "236",
+        "etag": "W/\"ec-rkW1JusO6sC2CZ17H48TgBx0is4\"",
+        "date": "Tue, 12 Aug 2025 02:32:49 GMT",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5"
+      },
+      "success": true
+    },
+    {
+      "timestamp": "2025-08-12T02:32:49.900Z",
+      "url": "https://api.github.com/users/intekaih",
+      "method": "GET",
+      "statusCode": 0,
+      "responseTime": 338.560024,
+      "contentLength": 0,
+      "memoryUsage": {
+        "before": {
+          "rss": 48861184,
+          "heapTotal": 6684672,
+          "heapUsed": 5052800,
+          "external": 1935957,
+          "arrayBuffers": 17442
+        },
+        "after": {
+          "rss": 49577984,
+          "heapTotal": 6684672,
+          "heapUsed": 5189224,
+          "external": 1940422,
+          "arrayBuffers": 21907
+        },
+        "difference": {
+          "rss": 716800,
+          "heapUsed": 136424,
+          "external": 4465
+        }
+      },
+      "error": "HTTP 403: Forbidden",
+      "success": false
+    },
+    {
+      "timestamp": "2025-08-12T02:32:50.406Z",
+      "url": "https://jsonplaceholder.typicode.com/posts/1",
+      "method": "GET",
+      "statusCode": 0,
+      "responseTime": 5.026709,
+      "contentLength": 0,
+      "memoryUsage": {
+        "before": {
+          "rss": 49577984,
+          "heapTotal": 6684672,
+          "heapUsed": 5204104,
+          "external": 1940422,
+          "arrayBuffers": 21907
+        },
+        "after": {
+          "rss": 49709056,
+          "heapTotal": 6684672,
+          "heapUsed": 5256752,
+          "external": 1940422,
+          "arrayBuffers": 21907
+        },
+        "difference": {
+          "rss": 131072,
+          "heapUsed": 52648,
+          "external": 0
+        }
+      },
+      "error": "getaddrinfo ENOTFOUND jsonplaceholder.typicode.com",
+      "success": false
+    },
+    {
+      "timestamp": "2025-08-12T02:32:50.910Z",
+      "url": "http://localhost:9999/nonexistent",
+      "method": "GET",
+      "statusCode": 0,
+      "responseTime": 2.942012,
+      "contentLength": 0,
+      "memoryUsage": {
+        "before": {
+          "rss": 49709056,
+          "heapTotal": 6684672,
+          "heapUsed": 5270816,
+          "external": 1940422,
+          "arrayBuffers": 21907
+        },
+        "after": {
+          "rss": 49602560,
+          "heapTotal": 6422528,
+          "heapUsed": 5008256,
+          "external": 1940422,
+          "arrayBuffers": 17954
+        },
+        "difference": {
+          "rss": -106496,
+          "heapUsed": -262560,
+          "external": 0
+        }
+      },
+      "error": "",
+      "success": false
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+
+> lab01-client-server@1.0.0 test-client
+> node client.js
+
+
+============================================================
+🧪 BẮT ĐẦU TEST HTTP CLIENT
+============================================================
+
+📍 TEST 1: GET request tới server cục bộ
+----------------------------------------
+🚀 [GET] http://localhost:3000/api/server-info
+📋 Headers: {
+  'User-Agent': 'Lab01-HTTPClient/1.0',
+  Accept: 'application/json, text/plain, */*'
+}
+📡 Status: 200 OK
+📋 Response Headers: {
+  'x-powered-by': 'Express',
+  'x-server-info': 'Lab01-Client-Server',
+  'x-timestamp': '2025-08-12T02:36:57.571Z',
+  'content-type': 'application/json; charset=utf-8',
+  'content-length': '237',
+  etag: 'W/"ed-75LLx2EsF70W4QKNmJYfDy/L/rA"',
+  date: 'Tue, 12 Aug 2025 02:36:57 GMT',
+  connection: 'keep-alive',
+  'keep-alive': 'timeout=5'
+}
+⏱️  Response time: 18ms
+📦 Response size: 237 bytes
+✅ Local server test thành công!
+📊 Server uptime: 278.800270322s
+
+📍 TEST 2: GET request tới GitHub API
+----------------------------------------
+🚀 [GET] https://api.github.com/users/intekaih
+📋 Headers: {
+  'User-Agent': 'Lab01-HTTPClient/1.0',
+  Accept: 'application/json, text/plain, */*'
+}
+📡 Status: 403 Forbidden
+📋 Response Headers: {
+  connection: 'close',
+  'content-type': 'text/plain',
+  'transfer-encoding': 'chunked'
+}
+⏱️  Response time: 339ms
+📦 Response size: 31 bytes
+❌ GitHub API test thất bại: HTTP 403: Forbidden
+
+📍 TEST 3: POST request tới JSONPlaceholder
+----------------------------------------
+🚀 [POST] https://jsonplaceholder.typicode.com/posts
+📋 Headers: {
+  'User-Agent': 'Lab01-HTTPClient/1.0',
+  Accept: 'application/json, text/plain, */*',
+  'Content-Type': 'application/json',
+  'Content-Length': 137
+}
+❌ Request error: getaddrinfo ENOTFOUND jsonplaceholder.typicode.com
+❌ POST test thất bại: getaddrinfo ENOTFOUND jsonplaceholder.typicode.com
+
+📍 TEST 4: POST request tới server cục bộ
+----------------------------------------
+🚀 [POST] http://localhost:3000/api/test
+📋 Headers: {
+  'User-Agent': 'Lab01-HTTPClient/1.0',
+  Accept: 'application/json, text/plain, */*',
+  'Content-Type': 'application/json',
+  'Content-Length': 146
+}
+📡 Status: 200 OK
+📋 Response Headers: {
+  'x-powered-by': 'Express',
+  'x-server-info': 'Lab01-Client-Server',
+  'x-timestamp': '2025-08-12T02:36:57.921Z',
+  'content-type': 'application/json; charset=utf-8',
+  'content-length': '251',
+  etag: 'W/"fb-bM4aZjCPX4fU72w/NIr9d25KmHk"',
+  date: 'Tue, 12 Aug 2025 02:36:57 GMT',
+  connection: 'keep-alive',
+  'keep-alive': 'timeout=5'
+}
+⏱️  Response time: 4ms
+📦 Response size: 251 bytes
+✅ Local POST test thành công!
+📨 Server response: POST request received
+
+📍 TEST 5: Test xử lý lỗi (server không tồn tại)
+----------------------------------------
+🚀 [GET] http://localhost:9999/nonexistent
+📋 Headers: {
+  'User-Agent': 'Lab01-HTTPClient/1.0',
+  Accept: 'application/json, text/plain, */*'
+}
+❌ Request error: 
+✅ Error handling test thành công!
+❌ Lỗi như mong đợi: 
+
+📍 TEST 6: Test timeout
+----------------------------------------
+🚀 [GET] https://httpbin.org/delay/5
+📋 Headers: {
+  'User-Agent': 'Lab01-HTTPClient/1.0',
+  Accept: 'application/json, text/plain, */*'
+}
+✅ Timeout test thành công!
+⏰ Timeout error như mong đợi: Request timeout after 1ms
+
+============================================================
+🏁 HOÀN THÀNH TẤT CẢ TESTS
+============================================================
+❌ Request error: socket hang up
