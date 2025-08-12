@@ -1,0 +1,58 @@
+ 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 01 - Client-Server Fundamentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌐 Lab 01: Client-Server Architecture</h1>
+            <p>Bài thực hành kiến thức cơ bản về Client-Server</p>
+        </header>
+
+        <main>
+            <section class="server-info">
+                <h2>📊 Thông tin Server</h2>
+                <button id="getServerInfo" class="btn btn-primary">
+                    Lấy thông tin Server
+                </button>
+                <div id="serverData" class="data-display"></div>
+            </section>
+
+            <section class="network-test">
+                <h2>🔗 Test Network Requests</h2>
+                <div class="button-group">
+                    <button id="testGet" class="btn btn-secondary">
+                        Test GET Request
+                    </button>
+                    <button id="testPost" class="btn btn-secondary">
+                        Test POST Request
+                    </button>
+                    <button id="testExternal" class="btn btn-secondary">
+                        Test External API
+                    </button>
+                </div>
+                <div id="networkResults" class="data-display"></div>
+            </section>
+
+            <section class="performance">
+                <h2>⚡ Performance Monitor</h2>
+                <button id="startMonitor" class="btn btn-success">
+                    Bắt đầu Monitor
+                </button>
+                <div id="performanceData" class="data-display"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 - Lab 01 Client-Server | Nhóm: [Tên nhóm của bạn]</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

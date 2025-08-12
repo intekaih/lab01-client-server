@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "exportTime": "2025-08-12T02:12:17.487Z",
+    "totalRequests": 4,
+    "monitoringDuration": 1911
+  },
+  "analysis": {
+    "summary": {
+      "totalRequests": 4,
+      "successfulRequests": 3,
+      "failedRequests": 1,
+      "successRate": "75.00"
+    },
+    "performance": {
+      "avgResponseTime": "133.09",
+      "minResponseTime": "21.02",
+      "maxResponseTime": "223.02",
+      "medianResponseTime": "155.22"
+    },
+    "traffic": {
+      "totalDataTransferred": 1725,
+      "avgRequestSize": "575.00"
+    },
+    "endpoints": {
+      "http://localhost:3000/api/server-info": {
+        "requests": 1,
+        "successful": 1,
+        "failed": 0,
+        "avgResponseTime": "21.02",
+        "totalData": 230
+      },
+      "https://api.github.com/users/intekaih": {
+        "requests": 1,
+        "successful": 1,
+        "failed": 0,
+        "avgResponseTime": "223.02",
+        "totalData": 1203
+      },
+      "https://jsonplaceholder.typicode.com/posts/1": {
+        "requests": 1,
+        "successful": 1,
+        "failed": 0,
+        "avgResponseTime": "155.22",
+        "totalData": 292
+      },
+      "http://localhost:9999/nonexistent": {
+        "requests": 1,
+        "successful": 0,
+        "failed": 1,
+        "avgResponseTime": 0,
+        "totalData": 0
+      }
+    }
+  },
+  "rawData": [
+    {
+      "timestamp": "2025-08-12T02:12:15.065Z",
+      "url": "http://localhost:3000/api/server-info",
+      "method": "GET",
+      "statusCode": 200,
+      "responseTime": 21.0244,
+      "contentLength": 230,
+      "memoryUsage": {
+        "before": {
+          "rss": 39780352,
+          "heapTotal": 6082560,
+          "heapUsed": 5445568,
+          "external": 2066260,
+          "arrayBuffers": 16659
+        },
+        "after": {
+          "rss": 43880448,
+          "heapTotal": 7548928,
+          "heapUsed": 5565056,
+          "external": 2079663,
+          "arrayBuffers": 17430
+        },
+        "difference": {
+          "rss": 4100096,
+          "heapUsed": 119488,
+          "external": 13403
+        }
+      },
+      "headers": {
+        "x-powered-by": "Express",
+        "x-server-info": "Lab01-Client-Server",
+        "x-timestamp": "2025-08-12T02:12:15.065Z",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "230",
+        "etag": "W/\"e6-a7bGm+iJZ07buo3ihbB9ZWMvXVk\"",
+        "date": "Tue, 12 Aug 2025 02:12:15 GMT",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5"
+      },
+      "success": true
+    },
+    {
+      "timestamp": "2025-08-12T02:12:15.797Z",
+      "url": "https://api.github.com/users/intekaih",
+      "method": "GET",
+      "statusCode": 200,
+      "responseTime": 223.0166,
+      "contentLength": 1203,
+      "memoryUsage": {
+        "before": {
+          "rss": 43950080,
+          "heapTotal": 7548928,
+          "heapUsed": 5579048,
+          "external": 2079663,
+          "arrayBuffers": 17430
+        },
+        "after": {
+          "rss": 47181824,
+          "heapTotal": 7811072,
+          "heapUsed": 5873952,
+          "external": 2090866,
+          "arrayBuffers": 24444
+        },
+        "difference": {
+          "rss": 3231744,
+          "heapUsed": 294904,
+          "external": 11203
+        }
+      },
+      "headers": {
+        "date": "Tue, 12 Aug 2025 02:12:08 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "cache-control": "public, max-age=60, s-maxage=60",
+        "vary": "Accept,Accept-Encoding, Accept, X-Requested-With",
+        "etag": "W/\"2aa75a62e79ba034037cb48ee352adfe609258bf4f842bed57cff5279fd34e68\"",
+        "last-modified": "Thu, 07 Aug 2025 12:35:26 GMT",
+        "x-github-media-type": "github.v3",
+        "x-github-api-version-selected": "2022-11-28",
+        "access-control-expose-headers": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset",
+        "access-control-allow-origin": "*",
+        "strict-transport-security": "max-age=31536000; includeSubdomains; preload",
+        "x-frame-options": "deny",
+        "x-content-type-options": "nosniff",
+        "x-xss-protection": "0",
+        "referrer-policy": "origin-when-cross-origin, strict-origin-when-cross-origin",
+        "content-security-policy": "default-src 'none'",
+        "server": "github.com",
+        "accept-ranges": "bytes",
+        "x-ratelimit-limit": "60",
+        "x-ratelimit-remaining": "55",
+        "x-ratelimit-reset": "1754968241",
+        "x-ratelimit-resource": "core",
+        "x-ratelimit-used": "5",
+        "content-length": "1211",
+        "x-github-request-id": "D359:1D29D1:2C2354:382061:689AA2FF"
+      },
+      "success": true
+    },
+    {
+      "timestamp": "2025-08-12T02:12:16.462Z",
+      "url": "https://jsonplaceholder.typicode.com/posts/1",
+      "method": "GET",
+      "statusCode": 200,
+      "responseTime": 155.2159,
+      "contentLength": 292,
+      "memoryUsage": {
+        "before": {
+          "rss": 47181824,
+          "heapTotal": 7811072,
+          "heapUsed": 5891448,
+          "external": 2090866,
+          "arrayBuffers": 24444
+        },
+        "after": {
+          "rss": 47427584,
+          "heapTotal": 7811072,
+          "heapUsed": 6081184,
+          "external": 2099209,
+          "arrayBuffers": 29391
+        },
+        "difference": {
+          "rss": 245760,
+          "heapUsed": 189736,
+          "external": 8343
+        }
+      },
+      "headers": {
+        "date": "Tue, 12 Aug 2025 02:12:15 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "292",
+        "connection": "keep-alive",
+        "server": "cloudflare",
+        "access-control-allow-credentials": "true",
+        "cache-control": "public, max-age=43200",
+        "etag": "W/\"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU\"",
+        "expires": "Tue, 12 Aug 2025 14:12:15 GMT",
+        "nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+        "pragma": "no-cache",
+        "report-to": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=3hjPEfIuvW1qxMvb6e39aa6hhwnvI%2FFJP2hh9Y%2B%2Bk6g%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1753807050\"}],\"max_age\":3600}",
+        "reporting-endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=3hjPEfIuvW1qxMvb6e39aa6hhwnvI%2FFJP2hh9Y%2B%2Bk6g%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1753807050\"",
+        "vary": "Origin, Accept-Encoding",
+        "via": "2.0 heroku-router",
+        "x-content-type-options": "nosniff",
+        "x-powered-by": "Express",
+        "x-ratelimit-limit": "1000",
+        "x-ratelimit-remaining": "999",
+        "x-ratelimit-reset": "1753807072",
+        "age": "22635",
+        "cf-cache-status": "HIT",
+        "cf-ray": "96dc725e7a1904c2-HKG",
+        "alt-svc": "h3=\":443\"; ma=86400"
+      },
+      "success": true
+    },
+    {
+      "timestamp": "2025-08-12T02:12:16.976Z",
+      "url": "http://localhost:9999/nonexistent",
+      "method": "GET",
+      "statusCode": 0,
+      "responseTime": 5.9211,
+      "contentLength": 0,
+      "memoryUsage": {
+        "before": {
+          "rss": 48050176,
+          "heapTotal": 8335360,
+          "heapUsed": 5724064,
+          "external": 2099209,
+          "arrayBuffers": 19335
+        },
+        "after": {
+          "rss": 48185344,
+          "heapTotal": 8597504,
+          "heapUsed": 5867624,
+          "external": 2099209,
+          "arrayBuffers": 19335
+        },
+        "difference": {
+          "rss": 135168,
+          "heapUsed": 143560,
+          "external": 0
+        }
+      },
+      "error": "",
+      "success": false
+    }
+  ]
+}
