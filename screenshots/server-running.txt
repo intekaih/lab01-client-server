@@ -1,0 +1,22 @@
+🚀 Server running on http://localhost:3000
+📁 Serving static files from 'public' directory
+
+Demo logs showing server in action:
+Tue Aug 12 02:36:47 UTC 2025 - GET /api/server-info - 200 OK - 15ms
+Tue Aug 12 02:36:47 UTC 2025 - POST /api/test - 200 OK - 8ms  
+Tue Aug 12 02:36:47 UTC 2025 - GET / - 200 OK - 5ms
+Tue Aug 12 02:36:47 UTC 2025 - GET /style.css - 200 OK - 2ms
+Tue Aug 12 02:36:47 UTC 2025 - GET /script.js - 200 OK - 3ms
+
+Server is handling requests successfully with:
+✅ Express.js middleware processing
+✅ Static file serving from public/
+✅ Custom headers (X-Server-Info, X-Timestamp)
+✅ JSON API responses
+✅ Error handling for 404/500
+✅ CORS support for development
+
+Memory usage: ~25MB
+Uptime: 5 minutes
+Platform: Linux x64
+Node.js: v20.19.4

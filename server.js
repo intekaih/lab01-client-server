@@ -10,6 +10,13 @@ const PORT = 3000;
 app.use(express.static('public'));
 app.use(express.json());
 
+// Logging middleware
+app.use((req, res, next) => {
+    const timestamp = new Date().toISOString();
+    console.log(`📝 [${timestamp}] ${req.method} ${req.url} - ${req.ip}`);
+    next();
+});
+
 // Custom headers
 app.use((req, res, next) => {
     res.setHeader('X-Server-Info', 'Lab01-Client-Server');
@@ -31,6 +38,7 @@ app.get('/api/server-info', (req, res) => {
         cpuCount: os.cpus().length
     };
     
+    console.log(`✅ Server info requested - responding with system data`);
     res.json({
         success: true,
         data: serverInfo
@@ -39,6 +47,7 @@ app.get('/api/server-info', (req, res) => {
 
 // Test POST endpoint
 app.post('/api/test', (req, res) => {
+    console.log(`📤 POST request received with data:`, req.body);
     res.json({
         success: true,
         message: 'POST request received',
